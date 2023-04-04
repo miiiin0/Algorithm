@@ -1,3 +1,5 @@
+//소수 찾기
+
 package BaekJoon_java;
 
 import java.util.*;
