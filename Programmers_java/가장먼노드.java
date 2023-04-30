@@ -3,50 +3,57 @@ package Programmers_java;
 import java.util.*;
 
 class Solution {
-    // ArrayList 두개 사용하여 2차원 배열 형태로 사용하기
-    static ArrayList<ArrayList<Integer>> list= new ArrayList<>();
-    static boolean visited[];
+    // int[][]로 만들면 테스트8,9에서 메모리 초과가 뜬다.
+    // boolean[][]을 사용하자.
+    static boolean[][] graph;
+    static boolean[] visited;
 
     public int solution(int n, int[][] edge) {
         int answer = 0;
-
+        graph = new boolean[n+1][n+1];
         visited = new boolean[n+1];
-
-        //n번 반복하여 ArrayList만들기
-        for(int i=0; i<=n; i++) { 
-            list.add(new ArrayList<>());
-        }
 
         //양방향 그래프 표시 
         for(int i=0; i<edge.length; i++){
-            list.get(edge[i][0]).add(edge[i][1]);
-            list.get(edge[i][1]).add(edge[i][0]);
+            graph[edge[i][0]][edge[i][1]] = true;
+            graph[edge[i][1]][edge[i][0]] = true;
         }
         
         answer = bfs();
         return answer;
     }
 
+    // queue 1
+    // queue 2, 3
+    // queue 4, 5, 6
+
     public static int bfs() {
         Queue<Integer> queue = new LinkedList<>();
+
+        // 1번 노드로부터 가장 멀리 떨어진 노드가 몇 개인지를 return하는 문제이므로
         queue.add(1);
         visited[1] = true;
 
-        int cnt = 0;
         int start = 0;
+        int size = 0;
 
         while(!queue.isEmpty()) {
-            start = queue.poll();
-            for(int i : list.get(start)) {
-                if(!visited[i]) {
-                    queue.add(i);
-                    visited[i] = true;
+            size = queue.size(); //현재 큐 사이즈(=depth) 구하기
+
+            for(int k=0; k<size; k++) {
+                start = queue.poll();
+
+                for(int i=0; i<graph.length; i++) {
+                    if(!visited[i] && graph[start][i]) {
+                        queue.add(i);
+                        visited[i] = true;
+                    }
                 }
             }
+            
         }
 
-        return cnt;
+        return size;
     }
 }
 
-// 아직 미완성
