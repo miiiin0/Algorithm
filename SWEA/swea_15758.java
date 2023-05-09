@@ -5,13 +5,14 @@ import java.io.*;
 import java.math.BigInteger;
 
 public class swea_15758 {
+
+    //결과값 저장하기 위한 변수
+    static StringBuilder sb = new StringBuilder();
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer str = new StringTokenizer(br.readLine());
         int num = Integer.parseInt(str.nextToken());
-
-        StringBuilder sb = new StringBuilder();
-        
 
         for(int i=1; i<=num; i++) {
             String answer = "no";
