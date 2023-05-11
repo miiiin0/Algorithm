@@ -33,5 +33,6 @@ public class swea_1204 {
             System.out.println("#"+caseNum+" "+answer);
 
         }
+        sc.close();
     }
 }
