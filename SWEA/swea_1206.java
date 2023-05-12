@@ -10,7 +10,7 @@ public class swea_1206 {
 
         int[] arr = {};
        
-        for(int i=1; i<=2; i++) {
+        for(int i=1; i<=10; i++) {
             
             StringTokenizer str = new StringTokenizer(br.readLine());
             int arrLength = Integer.parseInt(str.nextToken()); //100
