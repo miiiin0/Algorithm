@@ -8,7 +8,6 @@ public class swea_1961 {
     static int arrLength;
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuffer sb = new StringBuffer();
 
         int caseNum = Integer.parseInt(br.readLine());
 
