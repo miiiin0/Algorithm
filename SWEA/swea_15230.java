@@ -1,6 +1,5 @@
 package SWEA;
 
-import java.util.*;
 import java.io.*;
 
 public class swea_15230 {
