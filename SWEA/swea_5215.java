@@ -12,8 +12,6 @@ public class swea_5215 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int testCase = Integer.parseInt(br.readLine());
 		
-		
-		
 		for(int t=1; t<=testCase; t++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			//입력받기
