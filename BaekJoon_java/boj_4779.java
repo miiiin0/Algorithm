@@ -1,6 +1,5 @@
 package BaekJoon_java;
 
-import java.util.*;
 import java.io.*;
 
 public class boj_4779 {
