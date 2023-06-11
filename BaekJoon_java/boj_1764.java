@@ -16,7 +16,6 @@ public class boj_1764 {
         for(int i=0; i<n; i++) {
             nStr.add(br.readLine());
         }
-
         for(int i=0; i<m; i++) {
             mStr.add(br.readLine());
         }
