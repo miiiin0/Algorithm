@@ -11,7 +11,6 @@ public class boj_1012 {
     static int[][] arr;
     static boolean[][] visited;
 
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -44,8 +43,6 @@ public class boj_1012 {
             System.out.println(answer);
 
         }
-        
-
     }
 
     public static int BFS(int x, int y) {
@@ -68,8 +65,6 @@ public class boj_1012 {
                         q.add(new int[] {nextX, nextY});
                     }
                 }
-
-                
             }
         }
 
