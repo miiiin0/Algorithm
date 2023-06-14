@@ -29,7 +29,7 @@ public class boj_1764 {
 
         System.out.println(answer.size());
 
-        Iterator iter = answer.iterator(); // Iterator 선언
+        Iterator<String> iter = answer.iterator(); // Iterator 선언
         while (iter.hasNext()) { // 다음값이 있는지 체크
             System.out.println(iter.next()); // 값 출력
         }
