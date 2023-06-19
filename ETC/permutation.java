@@ -1,4 +1,4 @@
-package ETC;
+
 
 public class permutation {
 

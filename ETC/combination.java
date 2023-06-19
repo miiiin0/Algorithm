@@ -1,5 +1,3 @@
-package ETC;
-
 public class combination {
     static int[] arr; //원본 배열
     static boolean[] visited; //방문여부 체크하는 배열

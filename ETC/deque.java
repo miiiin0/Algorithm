@@ -1,5 +1,3 @@
-package ETC;
-
 import java.util.*;
 
 public class deque {
